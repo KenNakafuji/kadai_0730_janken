@@ -1,0 +1,103 @@
+.image1 {
+    text-align: center;
+}
+
+.fade1 {
+    animation: fadeIn 5s ease 0.5s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.fade2 {
+    animation: fadeIn 5s ease 0.5s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+
+.hero-image__text {
+    text-align: center;
+    font-size: 4.5rem;
+    font-weight: bold;
+    font-family: "M PLUS Rounded 1c";
+}
+
+.hero-image__text2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: "M PLUS Rounded 1c";
+}
+
+.main {
+    display: flex;
+    margin: 100px;
+}
+
+.button {
+    background-color: #FFD61A;
+    color: #FFFFFF;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0px 2px 2px 1px #dcdcdc;
+    border-radius: 50%;
+}
+
+.button:active {
+    background-color: yellow;
+    box-shadow: none;
+    position: relative;
+    border-bottom: none;
+    top: 7px;
+}
+
+.answer {
+    text-align: center;
+}
+
+.question {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 0 400px 0 0;
+    font-family: "M PLUS Rounded 1c";
+    margin: 0px;
+}
+
+.menu {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 50px;
+    font-family: "M PLUS Rounded 1c";
+}
+
+.container {
+    overflow: auto;
+    scroll-snap-type: y;
+    height: 100vh;
+  }
+.area {
+    scroll-snap-align: start;
+    height: 100vh;
+  }

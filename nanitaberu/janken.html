@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/sample.css">
+  <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+  <title>じゃんけん</title>
+</head>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<body>
+
+  <!-- メインビジュアル -->
+
+  <main class="container">
+    <section class="area">
+
+      <div class="hero-image">
+        <div class="fade1">
+          <p class="hero-image__text"> 今日何食べよう・・・</p>
+        </div>
+        <div class="fade2">
+          <p class="hero-image__text2">「すぐに浮かばない」そんな時のメシ選びツール</p>
+        </div>
+
+      </div>
+
+      <div class="image1"><img src="images/food_omoide.png" alt="メインビジュアル" width="500px" height="500px"></div>
+
+    </section>
+
+    <main class="area">
+      <ul class="main">
+        <li id="wasyoku" class="button">和食</li>
+        <li id="yousyoku" class="button">洋食</li>
+        <li id="italyan" class="button">イタリアン</li>
+        <li id="chuka" class="button">中華</li>
+        <li id="asian" class="button">アジアン</li>
+      </ul>
+
+
+      <p class="question">あなたが食べたいのは？</p>
+      <div id="answer" class="answer">
+        <img src="images/oishii1_boy.png" alt="">
+      </div>
+
+      <div id="menu" class="menu">
+        <p>これだ！！</p>
+      </div>
+    </main>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      /////グーボタン/////
+
+
+      //イベント
+      $("#wasyoku").on("click", function () {
+
+        // 乱数
+        const randomNumber = Math.floor(Math.random() * 4 + 1);
+        console.log(randomNumber);
+
+        /////和食/////
+
+        //条件分岐・表示処理
+        if (randomNumber === 1) {
+          $('#answer').html(' <img src="images/wasyoku/takoyaki.png" alt="" width="400" height="300">');
+          $('#menu').text("たこ焼き！！");
+        } else if (randomNumber === 2) {
+          $('#answer').html(' <img src="images/wasyoku/misoshiru.png" alt="" width="400" height="300">');
+          $('#menu').text("味噌汁ぅ！！");
+        } else if (randomNumber === 3) {
+          $('#answer').html(' <img src="images/wasyoku/saba-misonikomi.png" alt="" width="400" height="300">');
+          $('#menu').text("サバ味噌煮込み！！");
+        } else if (randomNumber === 4) {
+          $('#answer').html(' <img src="images/wasyoku/osushi_maguro_a.png" alt="" width="400" height="300">');
+          $('#menu').text("寿司寿司寿司ぃ！！！");
+        }
+      });
+
+
+      ///// 洋食 /////
+
+
+      //イベント
+      $("#yousyoku").on("click", function () {
+
+        //乱数
+        const randomNumber = Math.floor(Math.random() * 4 + 1);
+        console.log(randomNumber);
+
+        //条件分岐・表示処理
+        if (randomNumber === 1) {
+          $('#answer').html(' <img src="images/yousyoku/nikomi-hamberg.png" alt="" width="400" height="300">');
+          $('#menu').text("煮込みハンバーグ！！");
+        } else if (randomNumber === 2) {
+          $('#answer').html(' <img src="images/yousyoku/Dice-steak.png" alt="" width="400" height="300">');
+          $('#menu').text("サイコロステーキ！！");
+        } else if (randomNumber === 3) {
+          $('#answer').html(' <img src="images/yousyoku/croissant.png" alt="" width="400" height="300">');
+          $('#menu').text("パァン！！！");
+        } else if (randomNumber === 4) {
+          $('#answer').html(
+            '<img src="images/yousyoku/87b220ecdb4e76850ae6b3f9b8a7854d43595b06.jpeg" alt="" width="600" height="300">'
+          );
+          $('#menu').text("オムライス！！");
+        }
+      });
+
+      ///// イタリアン /////
+
+
+      //イベント
+      $("#italyan").on("click", function () {
+
+        //乱数
+        const randomNumber = Math.floor(Math.random() * 3 + 1);
+        console.log(randomNumber);
+
+        //条件分岐・表示処理
+        if (randomNumber === 1) {
+          $('#answer').html(' <img src="images/italyan/pizza.jpeg" alt="">');
+          $('#menu').text("ピッツァ！！");
+        } else if (randomNumber === 2) {
+          $('#answer').html(' <img src="images/italyan/eyecatch.jpeg" alt="" width="400" height="300">');
+          $('#menu').text("カプレーゼ！！");
+        } else if (randomNumber === 3) {
+          $('#answer').html(' <img src="images/italyan/ナポリタン.png" alt="" width="400" height="300">');
+          $('#menu').text("ナポリタン！！");
+        } else if (randomNumber === 4) {
+          $('#answer').html(
+            ' <img src="images/italyan/1_020200626164931_MnKR.jpeg" alt="" width="400" height="300">');
+          $('#menu').text("パスタ！！");
+        }
+      });
+
+      ///// 中華 /////
+
+
+      //イベント
+      $("#chuka").on("click", function () {
+
+        //乱数
+        const randomNumber = Math.floor(Math.random() * 3 + 1);
+        console.log(randomNumber);
+
+        //条件分岐・表示処理
+        if (randomNumber === 1) {
+          $('#answer').html(' <img src="images/chuka/gyouza.png" alt="" width="400" height="300">');
+          $('#menu').text("餃子！！");
+        } else if (randomNumber === 2) {
+          $('#answer').html(' <img src="images/chuka/IK21317950.jpg.webp" alt="" width="400" height="300">');
+          $('#menu').text("汁なし坦々麺！！");
+        } else if (randomNumber === 3) {
+          $('#answer').html(' <img src="images/chuka/siumaiGFVL9778.jpg.webp" alt="" width="400" height="300">');
+          $('#menu').text("シュウマイ！！");
+        } else if (randomNumber === 4) {
+          $('#answer').html(' <img src="images/chuka/main.jpeg" alt="" width="400" height="300">');
+          $('#menu').text("チャーハン！！！");
+        }
+      });
+
+      ///// アジアン /////
+
+
+      //イベント
+      $("#asian").on("click", function () {
+
+        //乱数
+        const randomNumber = Math.floor(Math.random() * 3 + 1);
+        console.log(randomNumber);
+
+        //条件分岐・表示処理
+        if (randomNumber === 1) {
+          $('#answer').html(' <img src="images/asian/11_79_ethnic_02.jpeg" alt="" width="400" height="300">');
+          $('#menu').text("ガパオライス！！");
+        } else if (randomNumber === 2) {
+          $('#answer').html(' <img src="images/asian/11_79_ethnic_04.jpeg" alt="" width="400" height="300">');
+          $('#menu').text("カオマンガイ！！");
+        } else if (randomNumber === 3) {
+          $('#answer').html(' <img src="images/asian/07887_l.jpeg" alt="" width="400" height="300">');
+          $('#menu').text("ルーローハン！！");
+        } else if (randomNumber === 4) {
+          $('#answer').html(' <img src="images/asian/osushi_maguro_a.png" alt="" width="400" height="300">');
+          $('#menu').text("寿司寿司寿司ぃ！！！");
+        }
+      });
+    </script>
+  </main>
+
+</body>
+
+</html>
